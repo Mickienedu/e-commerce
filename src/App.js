@@ -25,6 +25,7 @@ function App() {
 
 {/* link route to navbar  */}
       </Routes>
+      
 
       </BrowserRouter>
       
