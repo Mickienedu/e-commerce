@@ -1,7 +1,7 @@
 // to filter product like menubar,women,shoes 
 import React, { createContext, useState } from "react";
 import all_products from "../Components/Assets/all_product";
-import Product from "../Pages/Product";
+// import Product from "../Pages/Product";
 
 export const ShopContext = createContext(null);
  // addtocart function 
