@@ -12,7 +12,8 @@ import women_11 from "./women11.jpeg";
 import women_12 from "./women12.jpeg";
 import women_13 from "./women13.jpeg";
 import women_14 from "./women14.jpg";
-import women_15 from "./women15.jpg";
+import women_15 from "./women15.png";
+// import women_17 from "./women15.jpg";
 
 import men_1 from "./men1.jpeg";
 import men_2 from "./men2.jpeg";
