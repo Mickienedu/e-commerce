@@ -17,9 +17,46 @@ const LoginSignup = () => {
   // API FOR LOGIN SIGNUP PAGE
   const login = async () =>{
     console.log("Login function Executed",formData);
+    let responseData;
+    await fetch('http://localhost:4000/login',{
+      method:'POST',
+      headers:{
+        Accept:'application/form-data',
+        'Content-Type':'application/json',
+            },
+            body: JSON.stringify(formData),
+    }).then((response)=> response.json()).then((data)=>responseData=data)
+    
+    if (responseData.success){
+      localStorage.setItem('auth-token',responseData.token);
+      // once user register successful, send the user to homepage
+      window.location.replace("/");
+    }
+    else{
+      alert(responseData.errors)
+    }
+  
   }
   const signup = async () =>{
     console.log("Signup function executed",formData)
+    let responseData;
+    await fetch('http://localhost:4000/signup',{
+      method:'POST',
+      headers:{
+        Accept:'application/form-data',
+        'Content-Type':'application/json',
+            },
+            body: JSON.stringify(formData),
+    }).then((response)=> response.json()).then((data)=>responseData=data)
+    
+    if (responseData.success){
+      localStorage.setItem('auth-token',responseData.token);
+      // once user register successful, send the user to homepage
+      window.location.replace("/");
+    }
+    else{
+      alert(responseData.errors)
+    }
   }
 
   return (
