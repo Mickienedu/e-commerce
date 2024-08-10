@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+// import React, { useEffect, useState } from 'react'
 import './Popular.css'
 import data_product from '../Assets/data' //we removed this so as to import directly from the backend
 import Item from '../Item/Item'

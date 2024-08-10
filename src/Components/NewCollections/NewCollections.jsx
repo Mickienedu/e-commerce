@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+// import React, { useEffect, useState } from 'react'
 import './NewCollections.css'
 import new_collection from '../Assets/new_collections' // we removed this so that newcollection will be imported through admin
 import Item from '../Item/Item'
