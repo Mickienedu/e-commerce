@@ -1,12 +1,13 @@
 // to filter product like menubar,women,shoes 
 import React, { createContext, useEffect, useState } from "react";
-// import all_products from "../Components/Assets/all_product";
+import all_products from "../Components/Assets/all_product";
 
 export const ShopContext = createContext(null);
  // addtocart function 
  const getDefaultCart = () =>{
     let cart = {};
-    for (let index = 0; index < 300+1; index++) {
+    // for (let index = 0; index < 300+1; index++) {  // for backend
+    for (let index = 0; index < all_products.length+1; index++) {
         cart[index] = 0;
     }
     return cart;
@@ -14,29 +15,29 @@ export const ShopContext = createContext(null);
 
 const ShopContextProvider = (props) => {
 
-    // getting all the product from the API
-    const [all_products,setAll_Products] = useState([]);
+    // getting all the product from the API. backend
+    // const [all_products,setAll_Products] = useState([]);
 
     const [cartItems, setCartItems] = useState(getDefaultCart());
 
-    useEffect(()=>{
-    fetch('http://localhost:4000/allproducts')
-    .then((response)=>response.json())
-    .then((data)=>setAll_Products(data))
+    // useEffect(()=>{
+    // fetch('http://localhost:4000/allproducts')
+    // .then((response)=>response.json())
+    // .then((data)=>setAll_Products(data))
 
-    if (localStorage.getItem('auth-token')){
-        fetch('http://localhost:4000/getcart',{
-            method:'POST',
-            headers:{
-                Accept:'application/form-data',
-                'auth-token':`${localStorage.getItem('auth-token')}`,
-                'Content-Type':'application/json',
-            },
-            body:"",
-        }).then((response)=>response.json())
-        .then((data)=>setCartItems(data));
-    }
-    },[])
+    // if (localStorage.getItem('auth-token')){
+    //     fetch('http://localhost:4000/getcart',{
+    //         method:'POST',
+    //         headers:{
+    //             Accept:'application/form-data',
+    //             'auth-token':`${localStorage.getItem('auth-token')}`,
+    //             'Content-Type':'application/json',
+    //         },
+    //         body:"",
+    //     }).then((response)=>response.json())
+    //     .then((data)=>setCartItems(data));
+    // }
+    // },[])
 
     //add product in our cart
     const addToCart = (itemId) =>{

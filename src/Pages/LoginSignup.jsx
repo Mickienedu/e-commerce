@@ -3,7 +3,7 @@ import './CSS/LoginSignup.css'
 
 const LoginSignup = () => {
   // so you can login if  you have signed up before in the same login page, the place that says 'login here'
-  const [state,setState] = useState("Login");
+  const [state,setState] = useState("Login");  //adminlink
   // state variable to save our input field data 
   const [formData,setFormData] = useState({
     username:"",
