@@ -19,6 +19,7 @@
     width: 586px;
     height: 700px;
 }
+
 .productdisplay-right{
     margin: 0px 70px;
     display: flex;
@@ -244,10 +245,12 @@
         gap: 8px;
     }
     .productdisplay-img-list img{
-        height: 75px;
+        height: 49px;
+        width: 60px;
     }
     .productdisplay-main-img{
-        height: 330px;
+        height: 225px;
+        width: 210px;
     }
     .productdisplay-right{
         margin: 5px;

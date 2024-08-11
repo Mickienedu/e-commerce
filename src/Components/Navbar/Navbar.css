@@ -169,6 +169,7 @@
     .nav-menu{
         height: 70px;
         top: 50px;
+        /* width: auto; */
     }
     .nav-login-cart{
         transform: scale(0.8);

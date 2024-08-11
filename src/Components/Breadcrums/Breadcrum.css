@@ -27,12 +27,16 @@
 }
 @media (max-width: 800px){
     .breadcrum{
-        margin: 30px 10px;
+        margin: 30px 5px;
         font-size: 12px;
     }
 }
 @media (max-width: 500px){
     .breadcrum{
         font-size: 10px;
+        gap: 6px;
+    }
+    .breadcrum img{
+        width: 12px;
     }
 }

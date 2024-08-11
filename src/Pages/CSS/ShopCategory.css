@@ -97,7 +97,15 @@
     }
 }
 @media (max-width: 500px){
+   
     .shopcategory-products{
         grid-template-columns: 1fr 1fr;
+        width: 300px;
+        margin: 20px 40px;
+       
+    }
+    .shopcategory-products img{
+        width: 140px;
+        height: 140px;
     }
 }
